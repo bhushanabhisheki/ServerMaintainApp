@@ -1,0 +1,14 @@
+<button class="btn btn-primary" (click)="showHideDetails()">
+  Display Details
+</button>
+<p *ngIf="showDetails">Secret Password = Tuna</p>
+<p>Button was clicked at the following times</p>
+<ul>
+  <li
+    *ngFor="let times of timeButtonClicked; index as i"
+    [ngStyle]="{ backgroundColor: getColor(i) }"
+    [ngClass]="{ whiteText: i > 4 }"
+  >
+    {{ times }}
+  </li>
+</ul>
