@@ -1,9 +1,7 @@
-<p [ngStyle]="{ 'background-color': getColor() }">
-  <!-- using the css style notation -->
-  Server with ID {{ serverID }} is {{ getServerStatus() }}
-</p>
-
-<p [ngStyle]="{ backgroundColor: getColor() }">
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: serverStatus === 'online' }"
+>
   <!-- using the Object style notation -->
   Server with ID {{ serverID }} is {{ getServerStatus() }}
 </p>
