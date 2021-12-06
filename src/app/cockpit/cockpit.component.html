@@ -1,4 +1,3 @@
-<p>cockpit works!</p>
 <div class="row">
   <div class="col-xs-12">
     <p>Add new Servers or blueprints!</p>
@@ -7,10 +6,15 @@
     <label>Server Content</label>
     <input type="text" class="form-control" [(ngModel)]="newServerContent" />
     <br />
-    <button class="btn btn-primary" style="margin-right:20px" (click)="onAddServer()">
+    <button
+      class="btn btn-primary"
+      style="margin-right: 20px"
+      (click)="onAddServer()"
+    >
       Add Server
     </button>
     <button class="btn btn-primary" (click)="onAddBlueprint()">
       Add Server Blueprint
     </button>
   </div>
+</div>
