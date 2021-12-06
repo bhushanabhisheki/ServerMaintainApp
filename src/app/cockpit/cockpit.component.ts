@@ -5,10 +5,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './cockpit.component.html',
   styleUrls: ['./cockpit.component.scss'],
 })
-export class CockpitComponent {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+export class CockpitComponent implements OnInit {
+  ngOnInit(): void {}
   @Output('screated') serverCreated = new EventEmitter<{
     serverName: string;
     serverContent: string;
