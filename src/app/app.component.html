@@ -11,6 +11,15 @@
     <app-server-element
       *ngFor="let srvelement of serverElements"
       [server]="srvelement"
-    ></app-server-element>
+    >
+      <p>
+        <strong *ngIf="srvelement.type === 'server'" style="color: red">{{
+          srvelement.content
+        }}</strong>
+        <em *ngIf="srvelement.type === 'blueprint'">{{
+          srvelement.content
+        }}</em>
+      </p>
+    </app-server-element>
   </div>
 </div>
