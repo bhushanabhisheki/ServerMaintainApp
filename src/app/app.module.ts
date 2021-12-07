@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { BasicHightlightDirective } from './basic-highlight/basic-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { DirectivesComponent } from './directives/directives.component';
     CockpitComponent,
     ServerElementComponent,
     DirectivesComponent,
+    BasicHightlightDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
