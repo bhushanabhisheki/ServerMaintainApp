@@ -19,7 +19,7 @@
       [server]="srvelement"
       [name]="srvelement.name"
     >
-      <p>
+      <p #contentParagraph>
         <strong *ngIf="srvelement.type === 'server'" style="color: red">{{
           srvelement.content
         }}</strong>

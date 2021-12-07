@@ -10,6 +10,8 @@ import {
   OnChanges,
   OnInit,
   SimpleChanges,
+  ContentChild,
+  ElementRef,
 } from '@angular/core';
 
 @Component({
@@ -29,14 +31,22 @@ export class ServerElementComponent
     OnDestroy
 {
   @Input('server') element: { type: string; name: string; content: string };
+  @ContentChild('contentParagraph')
+  header: ElementRef | undefined;
   @Input('name') name: string | undefined;
   constructor() {
     this.element = { type: '', name: '', content: '' };
+
     console.log('constructor called');
   }
 
   ngOnInit(): void {
     console.log('ngOninit called');
+
+    console.log(
+      'Text content of Parent paragraph' +
+        this.header?.nativeElement.textContent
+    );
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -49,6 +59,10 @@ export class ServerElementComponent
   }
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit called');
+    console.log(
+      'Text content of Parent paragraph' +
+        this.header?.nativeElement.textContent
+    );
   }
 
   ngAfterContentChecked() {
